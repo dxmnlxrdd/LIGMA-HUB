@@ -4,7 +4,7 @@ local Window = Rayfield:CreateWindow({
     Name = "LIGMA HUB",
     Icon = 0, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
     LoadingTitle = "LIGMA HUB",
-    LoadingSubtitle = "by dxmnlxrd_",
+    LoadingSubtitle = "by dxmnlxrd_,6tears",
     Theme = "Default", -- Check https://docs.sirius.menu/rayfield/configuration/themes
     DisableRayfieldPrompts = false,
     DisableBuildWarnings = false, -- Prevents Rayfield from warning when the script has a version mismatch with the interface
@@ -39,7 +39,7 @@ local KIMTab = Window:CreateTab("Kim jong un", 4483362458) -- Title, Image
 KIMTab:CreateButton({
     Name = "Invisible (Click E)",
     Callback = function()
-        loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-fe-invisible-4366"))()  
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/dxmnlxrdd/LIGMA-HUB/refs/heads/main/invisbyligmahub.lua"))()
         print("Invisible script enabled")
     end
 })
@@ -59,6 +59,40 @@ KIMTab:CreateButton({
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/4gh9/Bang-Script-Gui/main/bang%20gui.lua"))()
         print("Bang enabled")
+    end
+})
+
+-- Button 4
+KIMTab:CreateButton({
+    Name = "Team Changer (from citizen to soldier, DOESNT CHANGE AFTER YOU LEAVE)",
+    Callback = function()
+        function ChangeTeam(targetTeamName)
+            local player = game:GetService("Players").LocalPlayer -- Get the local player
+            local targetTeam = game:GetService("Teams"):FindFirstChild(targetTeamName) -- Find the target team by name
+        
+            if targetTeam then
+                player.Team = targetTeam -- Set the player's team
+                player.TeamColor = targetTeam.TeamColor -- Update the team color (optional)
+                print("You have been switched to the team: " .. targetTeamName)
+            else
+                warn("The team '" .. targetTeamName .. "' does not exist.")
+            end
+        end
+        
+        -- Change from "ประชาชน" to "กองทัพบก"
+        local currentTeamName = "ประชาชน"
+        local targetTeamName = "กองทัพบก"
+        
+        -- Execute the switch
+        ChangeTeam(targetTeamName)"))()
+        print("changed")
+    end
+})
+
+-- Button 5
+KIMTab:CreateButton({
+    Name = "Team Changer (from citizen to soldier, DOESNT CHANGE AFTER YOU LEAVE)",
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/dxmnlxrdd/LIGMA-HUB/refs/heads/main/dexfromligmahub.lua"))()
     end
 })
 
