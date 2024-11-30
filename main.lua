@@ -62,28 +62,34 @@ KIMTab:CreateButton({
     end
 })
 
--- Slider 1
-local Slider = KIMTab:CreateSlider({
+-- Slider 1: Walkspeed
+local WalkspeedSlider = KIMTab:CreateSlider({
     Name = "Walkspeed",
-    Range = {0, 100},
+    Range = {0, 500},
     Increment = 10,
-    Suffix = "Walkspeed",
+    Suffix = " WalkSpeed", -- Adds a space before the suffix for better formatting
     CurrentValue = 10,
-    Flag = "Slider1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Flag = "WalkspeedSlider", -- Unique identifier
     Callback = function(Value)
-        game.Player.LocalPlayer.Character.Humanoid.Walkspeed = Value
-    end,
- })
+        local player = game.Players.LocalPlayer
+        if player and player.Character and player.Character:FindFirstChild("Humanoid") then
+            player.Character.Humanoid.WalkSpeed = Value
+        end
+    end
+})
 
- -- Slider 1
-local Slider = KIMTab:CreateSlider({
-    Name = "Walkspeed",
-    Range = {0, 100},
+-- Slider 2: Jumppower
+local JumpPowerSlider = KIMTab:CreateSlider({
+    Name = "Jump power",
+    Range = {0, 500},
     Increment = 10,
-    Suffix = "Walkspeed",
+    Suffix = " JumpPower",
     CurrentValue = 10,
-    Flag = "Slider1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Flag = "JumpPowerSlider", -- Unique identifier
     Callback = function(Value)
-        game.Player.LocalPlayer.Character.Humanoid.Jumpspeed = Value
-    end,
- })
+        local player = game.Players.LocalPlayer
+        if player and player.Character and player.Character:FindFirstChild("Humanoid") then
+            player.Character.Humanoid.JumpPower = Value
+        end
+    end
+})
