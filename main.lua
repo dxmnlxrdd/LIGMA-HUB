@@ -4,7 +4,7 @@ local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.
 
 local Window = Fluent:CreateWindow({
     Title = "Ligma hub new ui",
-    SubTitle = "dxmnlxrd_,6tears",
+    SubTitle = "dxmnxlrd_,6tears",
     TabWidth = 160,
     Size = UDim2.fromOffset(580, 460),
     Acrylic = false, -- The blur may be detectable, setting this to false disables blur entirely
@@ -36,12 +36,11 @@ do
     local LocalPlayer = Players.LocalPlayer
     local ReplicatedStorage = game:GetService("ReplicatedStorage")
     local UserInputService = game:GetService("UserInputService")
+    local DetectionRadius = 30
     -- Detect R6 or R15
     local player = game.Players.LocalPlayer
     local character = player.Character or player.CharacterAdded:Wait()
     local isR6 = character:FindFirstChild("Torso") ~= nil
-
-    local DetectionRadius = 30
 
     local function GetDistance(part1, part2)
         return (part1.Position - part2.Position).Magnitude
@@ -540,15 +539,6 @@ SaveManager:SetFolder("FluentScriptHub/specific-game")
 
 InterfaceManager:BuildInterfaceSection(Tabs.Settings)
 SaveManager:BuildConfigSection(Tabs.Settings)
-
-
-Window:SelectTab(1)
-
-Fluent:Notify({
-    Title = "Ligma hub",
-    Content = "The script has been loaded.",
-    Duration = 8
-})
 
 -- You can use the SaveManager:LoadAutoloadConfig() to load a config
 -- which has been marked to be one that auto loads!
