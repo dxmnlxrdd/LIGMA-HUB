@@ -8,4 +8,4 @@ this script is open source u can use it
 
 
 # script:
-loadstring(game:HttpGet("https://raw.githubusercontent.com/dxmnlxrdd/LIGMA-HUB/refs/heads/main/main.lua",true))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/dxmnlxrdd/ligmascript/refs/heads/main/main.lua",true))()
