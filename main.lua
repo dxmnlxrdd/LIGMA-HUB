@@ -3,8 +3,8 @@ local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/d
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
 
 local Window = Fluent:CreateWindow({
-    Title = "Ligma hub",
-    SubTitle = "dxmnxlrd_,6tears",
+    Title = "Ligmascript (discountinued)",
+    SubTitle = "thank you for using it!",
     TabWidth = 160,
     Size = UDim2.fromOffset(580, 460),
     Acrylic = false, -- The blur may be detectable, setting this to false disables blur entirely
@@ -26,7 +26,7 @@ do
     Window:SelectTab(1)
 
     Fluent:Notify({
-        Title = "Ligma hub",
+        Title = "ligmascript",
         Content = "Executed the script!",
         SubContent = "", -- Optional
         Duration = 5 -- Set to nil to make the notification not disappear
