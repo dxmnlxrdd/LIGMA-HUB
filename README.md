@@ -3,6 +3,8 @@
 a lame lego script for kim ahh map,4king lame ahh game and Debugging stuff + Universal scripts!
 
 Sadly I stopped making it and working on other project but script still working. (short term: discountinued but the script still working lol)
++ 
+this script is open source u can use it
 
 
 # script:
